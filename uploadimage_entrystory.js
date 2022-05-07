@@ -16,14 +16,17 @@
             document.body.append(input);
             input.style.display = "none";
             var h2 = document.querySelector("h2");
+            var uh2 = h2.innerText;
             h2.innerText = "화면을 클릭해주세요.";
             h2.style.textDecoration = "underline";
             console.log("<- 페이지 화면을 아무대나 클릭하세요");
-            document.body.addEventListener("click", function(){
-                h2.innerText = "엔트리 이야기";
+            var f;
+            document.body.addEventListener("click", (f=function(){
+                h2.innerText = uh2;
                 h2.style.textDecoration = "";
                 input.click();
-            });
+                document.body.removeEventListener("click", f);
+            }));
             alert("화면 밖을 클릭해주세요.");
         });
     };
