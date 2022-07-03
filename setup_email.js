@@ -1,4 +1,4 @@
-var 이메일주소 = prompt("이메일 주소");
+var 이메일주소 = prompt("이메일 주소 입력");
 fetch("/graphql", {
     method: "POST",
     headers: {
