@@ -68,7 +68,7 @@ var load = function(){
         };
         document.body.append(input);
         input.style.display = "none";
-        var clickable = generateClickable("클릭해서 이미지 올리기");
+        var clickable = generateClickable("클릭해서 GIF 올리기");
         clickable.onclick = function(){
             input.click();
         };
@@ -80,7 +80,7 @@ var load = function(){
     var data = `<svg width="${image.width}" height="${image.height}" xmlns="http://www.w3.org/2000/svg">
     <image href="${image.base64}" width="${image.width}" height="${image.height}"/>
 </svg>`;
-    var clickable = generateClickable("클릭해서 다운로드");
+    var clickable = generateClickable("클릭해서 SVG 다운로드");
     clickable.onclick = function(){
         var anc = document.createElement("a");
         anc.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(data));
