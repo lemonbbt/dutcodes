@@ -42,6 +42,7 @@ var load = function(){
     return new Promise(function(res, rej){
         let input = document.createElement("input");
         input.type = "file";
+        input.allow = "image/gif";
         input.onchange = function() {
             let extension = input.files[0].name.match(/^.+\.([^\.]+)$/)[1];
             let reader = new FileReader();
